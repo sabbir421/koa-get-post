@@ -5,10 +5,10 @@ const routes = new Router();
 
 
 const logMidelware=async(ctx,next)=>{
-    console.log('requiest\n', ctx.request.url);
+    console.log('request\n', ctx.request.url);
    
    await next();
-    console.log('response\n',ctx.response.body);
+    console.log('respons\n',ctx.response.body);
 }
 
 routes.get('/product/:productId', product.get );
